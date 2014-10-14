@@ -1,0 +1,39 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.cf:before, .cf:after{
+  content: " ";
+  display: table;
+}
+
+.cf:after{
+  clear: both;
+}
+
+/*<div class="media">
+             <a href="" class="img">
+                       <img src="" alt="me" />
+             </a>
+
+            <div class="bd">
+                       text
+            </div>
+</div>*/
+
+/* ====== media ====== */
+.media {margin:10px;}
+.media, .bd {overflow:hidden; _overflow:visible; zoom:1;}
+.media .img {float:left; margin-right: 10px;}
+.media .img img{display:block;}
+.media .imgExt{float:right; margin-left: 10px;} (edited)
+
+.v_middle{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
