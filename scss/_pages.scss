@@ -1,0 +1,121 @@
+// Import variables
+@import "_variables";
+
+.logo{
+  display: block;
+  margin: $base-unit/2 auto ;
+  clear: both;
+}
+.logo-nav{
+  // display: none;
+  float: $default-float;
+  margin-left: $base-unit;
+  height: $base-unit * 1.5;
+  width: 150px;
+  background-image: url(../img/logo.png);
+  background-size: cover;
+}
+.main_menu{
+  @include inline-list();
+  max-width: $base-unit * 20;
+  float: $opposite-direction;
+  li{
+    padding: $base-unit / 2 0;
+    a{
+      font-weight: 500;
+      text-transform: uppercase;
+      font-size: $base-unit / 2;
+      text-decoration: none;
+      -webkit-transition: color 300ms ease;
+      transition: color 300ms ease;
+      &:hover,
+      &:focus{
+        color: $link-secondary-color
+      }
+    }
+  }
+}
+.box{
+  float: $default-float;
+  min-width: $base-unit;
+  margin-left: $base-unit;
+  margin-bottom: $base-unit;
+  content: " ";
+  img{
+    max-width: 100%;
+  }
+}
+.box-big-sq{
+  width: $base-unit * 15;
+  height: $base-unit * 15;
+  background: transparentize($info-color, 0.6);
+}
+.box-long-sq{
+  width: $base-unit * 15;
+  height: $base-unit * 7;
+  background: transparentize($info-color, 0.6);
+}
+.box-xl-long-sq{
+  width: $base-unit * 23;
+  height: $base-unit * 7;
+  background: transparentize($info-color, 0.6);
+  margin-top: -$base-unit * 8;
+}
+.box-small-sq{
+  width: $base-unit * 7;
+  height: $base-unit * 7;
+  background: transparentize($info-color, 0.6);
+}
+.box-thin-sq{
+  width: $base-unit * 7;
+  height: $base-unit * 15;
+  background: transparentize($info-color, 0.6);
+}
+.carousel-central-box{
+  width: $base-unit * 15;
+  height: $base-unit * 10;
+  margin-left: 0;
+  background: transparentize($info-color, 0.6);
+}
+.carousel-lateral-box{
+  width: $base-unit * 9;
+  height: $base-unit * 10;
+  margin-left: 0;
+  background: transparentize($info-color, 0.6);
+}
+.img_container + p{
+  margin-top: $base-unit;
+}
+p{
+  padding: 0 $base-unit 1em $base-unit;
+  line-height: 0.75 * $base-unit;
+  color: $text-color;
+  &:last-child{
+    margin-bottom: $base-unit/ 2;
+  }
+}
+
+p[class*="box"]:first-child{
+  margin-#{$default-float}: 0;
+}
+// header on scroll
+//   background: rgba(255,255,255,0.6);
+//   border-bottom: 1px solid #eee;
+//   margin-bottom: 1.89em;
+//   position: fixed;
+//   z-index: 9999999;
+.calendar{
+  display: none;
+  position: absolute;
+  width: $base-unit * 10;
+  right: 0;
+  top: $base-unit * 1.5;
+  background: $info-color;
+  z-index: 99;
+}
+.active .calendar{
+  display: block;
+}
+.relative-container{
+  position: relative;
+}

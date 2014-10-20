@@ -1,0 +1,27 @@
+// GRID Variables
+$base-unit: 1.89394em;
+//$base-unit:1.25em;
+$row-length: 33;
+$max-width : 62.5em;
+//$max-width: $base-unit * $row-length;
+//$base-unit : $max-width / $row-length;
+$row : $base-unit * $row-length;
+$min-border : 1px;
+
+//We use these as default colors throughout
+$primary-color: rgba(50, 127, 166, 0.9);
+$secondary-color: rgba(161, 207, 230, 0.9);
+$alert-color: rgba(#f04124, 0.9);
+$success-color: rgba(#43AC6A, 0.9);
+$warning-color: rgba(#f08a24, 0.9);
+$info-color: rgba(210, 210, 210, 0.9);
+
+$link-secondary-border: rgb(61, 156, 204);
+$link-secondary-color: rgb(225, 232, 236);
+
+//Help classes
+$default-float: left;
+$opposite-direction: right;
+
+$font-family: Overlook, 'Helvetica Neue', Arial, sans-serif;
+$text-color: #727175;

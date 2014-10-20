@@ -2,50 +2,102 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hotel</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/utiles.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <header class="header">
-    <a href="#"><img src="" alt="Logo Hotel" class="logo"></a>
-    <a href="#" class="logo-nav"><img src="" alt="Logo small"></a>
-    <nav>
-      <ul class="main_menu">
-        <li><a href="#">HOTEL</a></li>
-        <li><a href="#">ROOMS</a></li>
-        <li><a href="#">SERVICES</a></li>
-        <li><a href="#">RATES</a></li>
-        <li><a href="#">CONTACT</a></li>
-      </ul>
-    </nav>
-    <button class="booking">BOOKING</button>
+  <header class="header row">
+    <a href="#">
+      <img src="img/logo.png" alt="Logo Hotel" class="logo">
+    </a>
+    <div class="nav_container">
+      <a href="#" class="logo-nav">
+      </a>
+      <a id="booking" class="btn btn-booking">BOOKING</a>
+      <div id="calendar" class="relative-container">
+        <ul class="calendar">
+          <li><a href="#">1</a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">1</a></li>
+        </ul>
+      </div>
+      <nav>
+        <ul class="main_menu">
+          <li><a href="#">HOTEL</a></li>
+          <li><a href="#">ROOMS</a></li>
+          <li><a href="#">SERVICES</a></li>
+          <li><a href="#">RATES</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <main class="main">
     <section id="hotel">
-      <article class="hotel">
-        <img src="" alt="Main image">
-        <p class="descrption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam laudantium possimus odio quas quidem earum eveniet consequuntur mollitia asperiores, doloremque soluta ipsum totam, nobis expedita deleniti est alias blanditiis omnis!</p>
+      <article class="hotel row">
+        <div id="slider" class="img_container">
+          <img src="img/hall.jpg" alt="Main hotel image" class="slider">
+          <img src="img/entrance.jpg" alt="Main hotel image" class="slider">
+          <img src="img/entrance2.jpg" alt="Main hotel image" class="slider">
+        </div>
+        <p>Un pequeño hotel urbano. Doce habitaciones que se asoman al centro histórico de Barcelona a través de un palacete del siglo XVI completamente restaurado. Una obra arquitectónica que conjuga pasado y presente.</p>
+        <p>Del pasado permanece el arco de medio punto que le sirve de acceso, sus piedras de sillería, sus vigas de madera, sus rejas y barandillas de forja. El presente llega de la mano de su minimalista diseño, la máxima calidad de los materiales, la suavidad de su mobiliario y su paleta de colores invitando al descanso y la relajación y, sobre todo, una nueva forma de entender la hostelería. A disposición del cliente, volcada en su comodidad, en la que se perciba la naturalidad de lo sencillo y el gusto por el detalle.</p>
+        <p>Un pequeño hotel urbano. Doce habitaciones. Un palacete del siglo XVI. Barcelona. Un mundo por conocer.</p>
       </article>
     </section>
     <section id="rooms">
-      <article class="rooms">
-
+      <article class="rooms row">
+        <div class="box box-big-sq">
+          <img src="http://placehold.it/454x454/f4f4f4&amp;text=[img 273*303]" alt="images">
+        </div>
+        <div class="box box-long-sq">
+          <img src="http://placehold.it/454x212/f4f4f4&amp;text=[img 273*303]" alt="images">
+        </div>
+        <div class="box box-long-sq">
+          <img src="http://placehold.it/454x212/f4f4f4&amp;text=[img 273*303]" alt="images">
+        </div>
+        <div class="box box-small-sq">
+          <img src="http://placehold.it/212x212/f4f4f4&amp;text=[img 273*303]" alt="images">
+        </div>
+        <div class="box box-long-sq">
+          <img src="http://placehold.it/454x212/f4f4f4&amp;text=[img 273*303]" alt="images">
+        </div>
+        <div class="box box-thin-sq">
+          <img src="http://placehold.it/212x454/f4f4f4&amp;text=[img 273*303]" alt="images">
+        </div>
+        <div class="box box-xl-long-sq">
+          <img src="http://placehold.it/696x212/f4f4f4&amp;text=[img 273*303]" alt="images">
+        </div>
       </article>
     </section>
     <section id="services">
-      <article class="services">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste excepturi, dolor est beatae ex laboriosam a laudantium repudiandae porro eos, nihil numquam quaerat placeat quam dolores et, mollitia, magni nisi.</p>
+      <article class="services row">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam laudantium possimus odio quas quidem earum eveniet consequuntur mollitia asperiores, doloremque soluta ipsum totam, nobis expedita deleniti est alias blanditiis omnis!</p>
         <div id="carousel">
-          <img src="#" alt="images">
-          <img src="#" alt="images">
-          <img src="#" alt="images">
+          <div class="box carousel-lateral-box">
+            <img src="http://placehold.it/273x303/f4f4f4&amp;text=[img 273*303]" alt="images">
+          </div>
+          <div class="box carousel-central-box">
+            <img src="http://placehold.it/455x303&amp;text=[img 455*303]" alt="images">
+          </div>
+          <div class="box carousel-lateral-box">
+            <img src="http://placehold.it/273x303/f4f4f4&amp;text=[img 273*303]" alt="images">
+          </div>
         </div>
       </article>
     </section>
     <section id="rates">
-      <article class="rates">
+      <article class="rates row">
         <table>
           <thead>
             <tr>
@@ -79,7 +131,7 @@
       </article>
     </section>
     <section id="contact">
-      <article class="contact">
+      <article class="contact row">
         <div id="map"></div>
         <address>
           Rambla Catalunya 137,
@@ -96,15 +148,15 @@
       </article>
     </section>
   </main>
-  <footer class="footer">
-    <ul class="footer_menu">
+  <footer class="footer row">
+    <ul class="footer_menu inline-list">
       <li><a href="#">HOTEL</a></li>
       <li><a href="#">ROOMS</a></li>
       <li><a href="#">SERVICES</a></li>
       <li><a href="#">RATES</a></li>
       <li><a href="#">CONTACT</a></li>
     </ul>
-    <ul>
+    <ul class="footer_menu inline-list">
       <li>F</li>
       <li>T</li>
       <li>I</li>
@@ -112,5 +164,6 @@
     <button class="newsletter">Join our newsletter</button>
     <p class="copyright">Copyright 2014</p>
   </footer>
+  <script type="text/javascript" src="js/functions.js"></script>
 </body>
 </html>

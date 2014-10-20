@@ -1,0 +1,6 @@
+.slider{
+  display: none;
+  &:first-child{
+    display: block;
+  }
+}

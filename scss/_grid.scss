@@ -1,0 +1,42 @@
+// Import variables
+@import "_variables";
+
+html,
+body{
+  width: 100%;
+  height: 100%;
+  font-family: $font-family;
+  background: #f0f0f0;
+}
+a{
+  color: $primary-color;
+}
+.header,
+.main,
+.footer{
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  background: white;
+}
+.row{
+  position: relative;
+  width: 100%;
+  min-height: $base-unit;
+}
+.row:before, .row:after {
+  display: table;
+  line-height: 0;
+  content: "";
+  clear: both;
+}
+.nav_container{
+  border-top: 1px solid $primary-color;
+}
+
+.img_container{
+  img{
+    max-width: 100%;
+    width: 100%;
+  }
+}

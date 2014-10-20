@@ -2,8 +2,7 @@ html,
 body {
   width: 100%;
   height: 100%;
-  font-family: Overlook, "Helvetica Neue", Arial, sans-serif;
-  background: #f0f0f0; }
+  font-family: Overlook, "Helvetica Neue", Arial, sans-serif; }
 
 a {
   color: rgba(50, 127, 166, 0.9); }
@@ -13,8 +12,7 @@ a {
 .footer {
   width: 100%;
   max-width: 62.5em;
-  margin: 0 auto;
-  background: white; }
+  margin: 0 auto; }
 
 .row {
   position: relative;
@@ -26,9 +24,6 @@ a {
   line-height: 0;
   content: "";
   clear: both; }
-
-.nav_container {
-  border-top: 1px solid rgba(50, 127, 166, 0.9); }
 
 .img_container img {
   max-width: 100%;
@@ -51,16 +46,12 @@ a {
 
 .logo {
   display: block;
-  margin: 0.94697em auto;
+  margin: 0 auto 1.89394em;
   clear: both; }
 
 .logo-nav {
-  float: left;
-  margin-left: 1.89394em;
-  height: 2.84091em;
-  width: 150px;
-  background-image: url(../img/logo.png);
-  background-size: cover; }
+  display: none;
+  float: left; }
 
 .main_menu {
   margin: 0 auto 0 auto;
@@ -70,7 +61,8 @@ a {
   list-style: none;
   overflow: hidden;
   max-width: 37.8788em;
-  float: right; }
+  float: right;
+  margin-bottom: 1.89394em; }
   .main_menu > li {
     list-style: none;
     float: left;
@@ -137,15 +129,11 @@ a {
   margin-left: 0;
   background: rgba(210, 210, 210, 0.3); }
 
-.img_container + p {
+img + p {
   margin-top: 1.89394em; }
 
 p {
-  padding: 0 1.89394em 1em 1.89394em;
-  line-height: 1.42046em;
-  color: #727175; }
-  p:last-child {
-    margin-bottom: 0.94697em; }
+  padding: 0 1.89394em 1.89394em 1.89394em; }
 
 p[class*="box"]:first-child {
   margin-left: 0; }
@@ -169,7 +157,7 @@ p[class*="box"]:first-child {
   display: inline-block;
   vertical-align: middle;
   margin: 0;
-  padding: 0.47349em 1.89394em;
+  padding: 1.89394em 1.89394em;
   background: transparent;
   border-width: 2px;
   border-style: solid;
@@ -180,7 +168,6 @@ p[class*="box"]:first-child {
 .btn-booking {
   float: right;
   margin-left: 1.89394em;
-  margin-top: 0.375em;
   color: rgba(50, 127, 166, 0.9);
   border-color: rgba(161, 207, 230, 0.9);
   background: transparent;
