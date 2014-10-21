@@ -200,3 +200,26 @@ p[class*="box"]:first-child {
     margin-left: -8.52273em; }
   .carousel .carousel-lateral-box:last-child {
     margin-left: -3.78788em; }
+
+.table {
+  text-align: center;
+  margin: 0 auto; }
+
+.table, th, td {
+  border: 1px solid rgba(50, 127, 166, 0.9);
+  border-collapse: collapse; }
+
+td, th {
+  padding: 1.26263em;
+  color: #727175; }
+
+td:hover {
+  background: rgba(161, 207, 230, 0.2); }
+
+th {
+  background: rgba(161, 207, 230, 0.9); }
+
+.celda1 {
+  visibility: hidden; }
+
+/*# sourceMappingURL=main.css.map */

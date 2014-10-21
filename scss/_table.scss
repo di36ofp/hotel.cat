@@ -1,0 +1,27 @@
+// Import variables
+@import "_variables";
+
+.table{
+  text-align: center;
+  margin: 0 auto;
+}
+
+.table, th, td {
+    border: 1px solid $primary-color;
+    border-collapse: collapse;
+}
+td, th{
+ 	padding: $base-unit/1.5;
+ 	color:$text-color;
+}
+td:hover{
+ 	background: rgba($secondary-color, .2 );
+}
+
+th{
+ 	background: $secondary-color;
+}
+
+.celda1{
+	visibility: hidden;
+}
