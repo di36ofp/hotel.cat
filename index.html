@@ -4,8 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hotel</title>
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/utiles.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -31,7 +29,7 @@
           <li><a href="#">1</a></li>
         </ul>
       </div>
-      <nav>
+      <nav class="nav">
         <ul class="main_menu">
           <li><a href="#">HOTEL</a></li>
           <li><a href="#">ROOMS</a></li>
@@ -46,8 +44,8 @@
     <section id="hotel">
       <article class="hotel row">
         <div id="slider" class="img_container">
-          <img src="img/hall.jpg" alt="Main hotel image" class="slider">
           <img src="img/entrance.jpg" alt="Main hotel image" class="slider">
+          <img src="img/hall.jpg" alt="Main hotel image" class="slider">
           <img src="img/entrance2.jpg" alt="Main hotel image" class="slider">
         </div>
         <p>Un pequeño hotel urbano. Doce habitaciones que se asoman al centro histórico de Barcelona a través de un palacete del siglo XVI completamente restaurado. Una obra arquitectónica que conjuga pasado y presente.</p>
@@ -58,40 +56,43 @@
     <section id="rooms">
       <article class="rooms row">
         <div class="box box-big-sq">
-          <img src="http://placehold.it/454x454/f4f4f4&amp;text=[img 273*303]" alt="images">
+          <img src="img/room1.jpg" alt="images">
         </div>
         <div class="box box-long-sq">
-          <img src="http://placehold.it/454x212/f4f4f4&amp;text=[img 273*303]" alt="images">
+          <img src="img/room2.jpg" alt="images">
         </div>
         <div class="box box-long-sq">
-          <img src="http://placehold.it/454x212/f4f4f4&amp;text=[img 273*303]" alt="images">
+          <img src="img/room3.jpg" alt="images">
         </div>
         <div class="box box-small-sq">
-          <img src="http://placehold.it/212x212/f4f4f4&amp;text=[img 273*303]" alt="images">
+          <img src="img/room4.jpg" alt="images">
         </div>
         <div class="box box-long-sq">
-          <img src="http://placehold.it/454x212/f4f4f4&amp;text=[img 273*303]" alt="images">
-        </div>
-        <div class="box box-thin-sq">
-          <img src="http://placehold.it/212x454/f4f4f4&amp;text=[img 273*303]" alt="images">
+          <img src="img/room5.jpg" alt="images">
         </div>
         <div class="box box-xl-long-sq">
-          <img src="http://placehold.it/696x212/f4f4f4&amp;text=[img 273*303]" alt="images">
+          <img src="img/room6.jpg" alt="images">
+        </div>
+        <div class="box box-thin-sq">
+          <img src="img/room7.jpg" alt="images">
         </div>
       </article>
     </section>
     <section id="services">
       <article class="services row">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam laudantium possimus odio quas quidem earum eveniet consequuntur mollitia asperiores, doloremque soluta ipsum totam, nobis expedita deleniti est alias blanditiis omnis!</p>
-        <div id="carousel">
+        <p>La opción más sencilla. Un espacio pensado para su comodidad y hacer de su estancia una recopilación de momentos agradables. El máximo nivel de accesibilidad, con todo a su alcance. La mejor manera de relajarse en un ambiente ligero. La naturalidad hecha placer.</p>
+<p>1 habitación doble de uso individual. Cama 135 x 200
+5 habitaciones dobles. Camas Queen size 160 x 200</p>
+<p>Todas las habitaciones Mayor Standard disponen de conexión gratuita a Internet vía WI-FI, televisión LCD interactiva, amplio baño privado recubierto con cristal de Murano, mini bar, caja de seguridad, climatización con control individualizado, secador de pelo y cuidada selección de amenities.</p>
+        <div id="carousel" class="carousel">
           <div class="box carousel-lateral-box">
-            <img src="http://placehold.it/273x303/f4f4f4&amp;text=[img 273*303]" alt="images">
+            <img src="img/desayuno.jpg" alt="images">
           </div>
           <div class="box carousel-central-box">
-            <img src="http://placehold.it/455x303&amp;text=[img 455*303]" alt="images">
+            <img src="img/entrada.jpg" alt="images">
           </div>
           <div class="box carousel-lateral-box">
-            <img src="http://placehold.it/273x303/f4f4f4&amp;text=[img 273*303]" alt="images">
+            <img src="img/bar.jpg" alt="images">
           </div>
         </div>
       </article>
@@ -149,19 +150,19 @@
     </section>
   </main>
   <footer class="footer row">
-    <ul class="footer_menu inline-list">
+    <ul class="footer_menu">
       <li><a href="#">HOTEL</a></li>
       <li><a href="#">ROOMS</a></li>
       <li><a href="#">SERVICES</a></li>
       <li><a href="#">RATES</a></li>
       <li><a href="#">CONTACT</a></li>
     </ul>
-    <ul class="footer_menu inline-list">
-      <li>F</li>
-      <li>T</li>
-      <li>I</li>
+    <ul class="footer_menu social">
+      <li class="fb">F</li>
+      <li class="tw">T</li>
+      <li class="in">I</li>
     </ul>
-    <button class="newsletter">Join our newsletter</button>
+    <a class="btn btn-newsletter">Join our newsletter</a>
     <p class="copyright">Copyright 2014</p>
   </footer>
   <script type="text/javascript" src="js/functions.js"></script>

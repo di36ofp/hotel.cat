@@ -77,10 +77,10 @@ docReady(function() {
     calendar.classList.toggle('active');
   }, false);
   
-  var slider = document.getElementById('slider');
-  slider.addEventListener('click', function ( event ){
-    event.preventDefault();
-    calendar.classList.toggle('active');
-  }, false);
+  // var slider = document.getElementById('slider');
+  // slider.addEventListener('click', function ( event ){
+  //   event.preventDefault();
+  //   slider.classList.toggle('active');
+  // }, false);
 
 });

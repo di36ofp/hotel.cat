@@ -23,9 +23,9 @@ $inline-list-children-display: block;
 // @mixin inline list
 //
 @mixin inline-list {
-  margin: $inline-list-top-margin auto $inline-list-bottom-margin auto;
-  margin-#{$default-float}: $inline-list-default-float-margin;
-  margin-#{$opposite-direction}: $inline-list-opposite-margin;
+  //margin: $inline-list-top-margin auto $inline-list-bottom-margin auto;
+  //margin-#{$default-float}: $inline-list-default-float-margin;
+  //margin-#{$opposite-direction}: $inline-list-opposite-margin;
   padding: $inline-list-padding;
   list-style: none;
   overflow: $inline-list-overflow;

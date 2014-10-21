@@ -7,7 +7,8 @@
   clear: both;
 }
 .logo-nav{
-  // display: none;
+  display: block;
+  visibility: hidden;
   float: $default-float;
   margin-left: $base-unit;
   height: $base-unit * 1.5;
@@ -15,10 +16,11 @@
   background-image: url(../img/logo.png);
   background-size: cover;
 }
-.main_menu{
+.main_menu,
+.footer_menu{
   @include inline-list();
-  max-width: $base-unit * 20;
-  float: $opposite-direction;
+  margin: 0 auto;
+  display: table;
   li{
     padding: $base-unit / 2 0;
     a{
@@ -33,6 +35,9 @@
         color: $link-secondary-color
       }
     }
+    &:first-child{
+      margin-left: 0;
+    }
   }
 }
 .box{
@@ -41,47 +46,31 @@
   margin-left: $base-unit;
   margin-bottom: $base-unit;
   content: " ";
+  max-width: 100%;//
   img{
     max-width: 100%;
   }
 }
 .box-big-sq{
   width: $base-unit * 15;
-  height: $base-unit * 15;
-  background: transparentize($info-color, 0.6);
+  //height: $base-unit * 15;
 }
 .box-long-sq{
   width: $base-unit * 15;
-  height: $base-unit * 7;
-  background: transparentize($info-color, 0.6);
+  //height: $base-unit * 7;
 }
 .box-xl-long-sq{
   width: $base-unit * 23;
-  height: $base-unit * 7;
-  background: transparentize($info-color, 0.6);
-  margin-top: -$base-unit * 8;
+  //height: $base-unit * 7;
 }
 .box-small-sq{
   width: $base-unit * 7;
-  height: $base-unit * 7;
-  background: transparentize($info-color, 0.6);
+  //height: $base-unit * 7;
 }
 .box-thin-sq{
   width: $base-unit * 7;
-  height: $base-unit * 15;
-  background: transparentize($info-color, 0.6);
-}
-.carousel-central-box{
-  width: $base-unit * 15;
-  height: $base-unit * 10;
-  margin-left: 0;
-  background: transparentize($info-color, 0.6);
-}
-.carousel-lateral-box{
-  width: $base-unit * 9;
-  height: $base-unit * 10;
-  margin-left: 0;
-  background: transparentize($info-color, 0.6);
+  //height: $base-unit * 15;
+  margin-top: -$base-unit * 8;
 }
 .img_container + p{
   margin-top: $base-unit;
@@ -104,18 +93,33 @@ p[class*="box"]:first-child{
 //   margin-bottom: 1.89em;
 //   position: fixed;
 //   z-index: 9999999;
-.calendar{
-  display: none;
-  position: absolute;
-  width: $base-unit * 10;
-  right: 0;
-  top: $base-unit * 1.5;
-  background: $info-color;
-  z-index: 99;
-}
-.active .calendar{
-  display: block;
-}
+//.calendar{
+//  display: none;
+//  position: absolute;
+//  width: $base-unit * 10;
+//  right: 0;
+//  top: $base-unit * 1.5;
+//  background: $info-color;
+//  z-index: 99;
+//}
+//.active .calendar{
+//  display: block;
+//}
 .relative-container{
   position: relative;
+}
+.social{
+  background-image: url(../img/icons.png);
+  background-repeat: no-repeat;
+  width: $base-unit * 2.5;
+  height: $base-unit * 2.5;
+  .fb{
+    background-position: xpos 0;
+  }
+  .tw{
+    background-position: xpos 0;
+  }
+  .in{
+    background-position: xpos 0;
+  }
 }

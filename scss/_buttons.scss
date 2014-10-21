@@ -16,6 +16,7 @@
 .btn-booking {
   float: $opposite-direction;
   margin-#{$default-float}: $base-unit;
+  margin-#{$opposite-direction}: $base-unit;
   margin-top: 0.375em;
   color: $primary-color;
   border-color: $secondary-color;
@@ -27,6 +28,16 @@
     color: $link-secondary-color;
     border-color: $link-secondary-border;
     background: $link-secondary-border;
+    outline: none;
+  }
+}
+.btn-newsletter{
+  @extend .btn-booking;
+  &:hover,
+  &:focus{
+    color: $link-secondary-color;
+    border-color: red;
+    background: red;
     outline: none;
   }
 }

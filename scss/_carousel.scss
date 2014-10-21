@@ -1,0 +1,18 @@
+.carousel{
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  .carousel-central-box{
+    width: $base-unit * 15;
+    margin-left: 0;
+  }
+  .carousel-lateral-box{
+    //width: $base-unit * 9;
+    &:first-child{
+      margin-left: -$base-unit * 4.5;
+    }
+    &:last-child{
+      margin-left: -$base-unit * 2;
+    }
+  }
+}
