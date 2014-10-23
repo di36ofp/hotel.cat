@@ -202,6 +202,21 @@ p[class*="box"]:first-child {
     margin-left: -3.78788em; }
 
 .table {
-  padding: 1.89394em; }
+  text-align: center;
+  margin: 0 auto; }
+  .table td:hover {
+    background: rgba(161, 207, 230, 0.2); }
+  .table th {
+    background: rgba(161, 207, 230, 0.9); }
+
+thead tr th:first-child {
+  visibility: hidden; }
+
+th,
+td {
+  border: 1px solid rgba(50, 127, 166, 0.9);
+  border-collapse: collapse;
+  padding: 1.26263em;
+  color: #727175; }
 
 /*# sourceMappingURL=styles.css.map */
