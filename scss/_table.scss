@@ -4,24 +4,21 @@
 .table{
   text-align: center;
   margin: 0 auto;
-}
-
-.table, th, td {
+  th,
+  td {
     border: 1px solid $primary-color;
     border-collapse: collapse;
-}
-td, th{
- 	padding: $base-unit/1.5;
- 	color:$text-color;
-}
-td:hover{
- 	background: rgba($secondary-color, .2 );
-}
-
-th{
- 	background: $secondary-color;
+    padding: $base-unit/1.5;
+ 	  color:$text-color;
+	}
+	td:hover{
+ 		background: rgba($secondary-color, .2 );
+	}
+	th{
+ 		background: $secondary-color;
+	}
 }
 
-.celda1{
+thead tr th:first-child{
 	visibility: hidden;
 }
