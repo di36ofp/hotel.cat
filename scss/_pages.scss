@@ -16,8 +16,7 @@
   background-image: url(../img/logo.png);
   background-size: cover;
 }
-.main_menu,
-.footer_menu{
+.main_menu,{
   @include inline-list();
   margin: 0 auto;
   display: table;
@@ -40,6 +39,7 @@
     }
   }
 }
+
 .box{
   float: $default-float;
   min-width: $base-unit;

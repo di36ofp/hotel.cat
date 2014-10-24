@@ -5,37 +5,24 @@
   border: 1px solid $primary-color;
   border-collapse: collapse;
 }
-
 .table{
   text-align: center;
-  margin: 0 auto $base-unit;
-  color: $text-color;
+  margin: 0 auto;
   border-collapse: collapse;
-  thead{
-    tr{
-      th{
-        @include border();
-        padding: $base-unit/1.5;
-        &:first-child{
-          visibility: hidden;
-        }
-      }
-    }
-  }
-  tbody{
-    tr{
-      th{
-        @include border();
-        background: $secondary-color;
-        padding: 0 $base-unit/1.5;
-      }
-      td{
-        @include border();
-        padding: $base-unit/1.5;
-        &:hover{
-          background: rgba($secondary-color, 0.2 );
-        }
-      }
-    }
-  }
+  font-size: 0.9em;
+  th,
+  td {
+    border: 1px solid $primary-color;
+    padding: $base-unit/1.5;
+ 	  color: $text-color;
+	}
+	td:hover{
+ 		background: rgba($secondary-color, 0.2);
+	}
+	th{
+    font-weight: normal;
+    color: $primary-color;
+ 		background: $secondary-color;
+	}
+
 }
