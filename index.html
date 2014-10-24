@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/utiles.css">
   <link rel="stylesheet" href="css/main.css">
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 </head>
 <body>
   <header class="header row">
@@ -125,19 +126,28 @@
     </section>
     <section id="contact">
       <article class="contact row">
-        <div id="map"></div>
-        <address>
-          Rambla Catalunya 137,
-          08001 Barcelona
-        </address>
-        <p>Phone: 93 218 00 00</p>
-        <form action="" class="contact">
-          <input type="text" class="text" placeholder="Name">
-          <input type="email" class="text" placeholder="Email">
-          <input type="tel" class="text" placeholder="Phone">
-          <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
-          <input type="submit" value="Send">
-        </form>
+        <div id="map-canvas"></div>
+        <div class="box box-small-sq">
+          <h6>El Passatge</h6>
+          <address>
+            Rambla Catalunya 137,<br>
+            08001 Barcelona,<br>
+            Catalonia
+          </address>
+          <p>Phone: 93 218 00 00</p>
+          <p>Fax: 93 218 00 01</p>
+          <p>Email: info@elpassatge.cat</p>
+          <p></p>
+        </div>
+        <div class="box box-xl-long-sq">
+          <form action="" class="contact">
+            <input type="text" class="text" placeholder="Name">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+            <input type="email" class="text" placeholder="Email">
+            <input type="tel" class="text" placeholder="Phone">
+            <input type="submit" value="Send">
+          </form>
+        </div>
       </article>
     </section>
   </main>
@@ -157,6 +167,7 @@
     <a class="btn btn-newsletter">Join our newsletter</a>
     <p class="copyright">© EL PASSATGE.  ALL RIGHTS RESERVED.</p>
   </footer>
+  <script type="text/javascript" src="js/maps.js"></script>
   <script type="text/javascript" src="js/functions.js"></script>
 </body>
 </html>

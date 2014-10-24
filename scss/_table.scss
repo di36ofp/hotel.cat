@@ -1,6 +1,10 @@
 // Import variables
 @import "_variables";
 
+@mixin border{
+  border: 1px solid $primary-color;
+  border-collapse: collapse;
+}
 .table{
   text-align: center;
   margin: 0 auto;
@@ -20,8 +24,5 @@
     color: $primary-color;
  		background: $secondary-color;
 	}
-}
 
-thead tr th:first-child{
-	visibility: hidden;
 }

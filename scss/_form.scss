@@ -1,0 +1,53 @@
+form{
+  width: 100%;
+  overflow: hidden;
+  input[type^="text"],
+  input[type^="email"],
+  input[type^="tel"]{
+    width: $base-unit * 15;
+    float: $default-float;
+    margin-#{$default-float}:$base-unit;
+    margin-bottom: $base-unit;
+    padding: $base-unit $base-unit / 2;
+  }
+  input[type^="submit"]{
+    @extend .btn;
+    float: right;
+    width: $base-unit * 11;
+    padding: 1.4em 12em;
+    margin-bottom: $base-unit;
+    font-size: 14px;
+    vertical-align: middle;
+    cursor: pointer;
+    background: #000;
+    border: none;
+    color: #fff;
+  }
+  textarea{
+    float: right;
+    display: inline-block;
+    width: $base-unit * 16;
+    margin-bottom: $base-unit;
+    height: 12.6em;
+    max-height: 12.6em;
+  }
+}
+.contact{
+  color: $text-color;
+  h6{
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: $base-unit;
+  }
+  address{
+    margin-bottom: $base-unit;
+    font{
+      size:1em;
+      weight:100;
+    }
+  }
+  p{
+    padding: 0;
+    margin: 0;
+  }
+}
