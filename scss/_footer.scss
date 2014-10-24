@@ -2,17 +2,17 @@
 @import "_variables";
 
 .footer{
-	margin: 0 auto; 
+	margin: 0 auto;
 	text-align: center;
 	background: rgba($secondary-color, .2 );
 	width: 100%;
 	height:$base-unit * 6;
 	.footer_menu{
-  @include inline-list();
-  margin: 0 auto;
-  display: inline;
-  li{
-    padding: $base-unit / 2 0;
+	  @include inline-list();
+	  margin: 0 auto;
+	  display: table;
+	  li{
+	    padding: $base-unit / 2 0;
     a{
       font-weight: 500;
       text-transform: uppercase;
@@ -31,23 +31,23 @@
 		}
 	}
 	.social{
-		display:inline;
+		display:table;
 		margin: 0 auto;
-			.fb{
+		.fb{
 			height: 5px;
 			width: 33px;
 			background-image: url("../img/rrss.png");
 			background-size: 109px 35px;
 			background-position: -38px 0px;
 			}
-			.tw{
+		.tw{
 				height: 5px;
 				width: 33px;
 				background-image: url("../img/rrss.png");
 				background-size: 109px 35px;
 				background-position: -2px 0px;
 			}
-			.in{
+		.in{
 				height: 5px;
 				width: 33px;
 				background-image: url("../img/rrss.png");
@@ -56,8 +56,9 @@
 			}
 		}
 	.copyright{
-	margin: 0 auto;
-	font-size: 0.7em;
+		clear: both;
+		margin: 0 auto;
+		font-size: 0.7em;
 	}
 }
 
