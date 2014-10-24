@@ -1,24 +1,41 @@
 // Import variables
 @import "_variables";
 
-.table{
-  text-align: center;
-  margin: 0 auto;
-  th,
-  td {
-    border: 1px solid $primary-color;
-    border-collapse: collapse;
-    padding: $base-unit/1.5;
- 	  color:$text-color;
-	}
-	td:hover{
- 		background: rgba($secondary-color, .2 );
-	}
-	th{
- 		background: $secondary-color;
-	}
+@mixin border{
+  border: 1px solid $primary-color;
+  border-collapse: collapse;
 }
 
-thead tr th:first-child{
-	visibility: hidden;
+.table{
+  text-align: center;
+  margin: 0 auto $base-unit;
+  color: $text-color;
+  border-collapse: collapse;
+  thead{
+    tr{
+      th{
+        @include border();
+        padding: $base-unit/1.5;
+        &:first-child{
+          visibility: hidden;
+        }
+      }
+    }
+  }
+  tbody{
+    tr{
+      th{
+        @include border();
+        background: $secondary-color;
+        padding: 0 $base-unit/1.5;
+      }
+      td{
+        @include border();
+        padding: $base-unit/1.5;
+        &:hover{
+          background: rgba($secondary-color, 0.2 );
+        }
+      }
+    }
+  }
 }
