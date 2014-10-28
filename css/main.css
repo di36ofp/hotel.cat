@@ -321,4 +321,18 @@ form {
     margin: 0 auto;
     font-size: 0.7em; }
 
-/*# sourceMappingURL=main.css.map */
+#datepicker {
+  display: none; }
+
+.active #datepicker {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 2.85em; }
+  .active #datepicker .ui-datepicker {
+    width: 250px; }
+    .active #datepicker .ui-datepicker table {
+      font-size: 0.8em; }
+    .active #datepicker .ui-datepicker .ui-widget-header {
+      font-size: 0.8em; }
