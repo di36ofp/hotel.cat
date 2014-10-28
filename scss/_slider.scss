@@ -7,7 +7,7 @@
     width: $row;
     height: $base-unit * 17;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto $base-unit;
     position: relative;
     overflow: hidden;
 	input {

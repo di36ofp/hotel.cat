@@ -33,6 +33,8 @@
 }
 .btn-newsletter{
   @extend .btn-booking;
+  float: none;
+  margin-bottom: $base-unit;
   &:hover,
   &:focus{
     color: $link-secondary-color;
