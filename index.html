@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hotel</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/utiles.css">
   <link rel="stylesheet" href="css/main.css">
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 </head>
 <body>
   <header class="header row">
@@ -17,7 +20,6 @@
       <a id="booking" class="btn btn-booking">BOOKING</a>
       <div id="calendar" class="relative-container">
         <ul class="calendar">
-          
         </ul>
       </div>
       <nav class="nav">
@@ -121,9 +123,9 @@
           <thead>
             <tr>
               <th></th>
-              <th>TEMPORADA baja</th>
-              <th>TEMPORADA media</th>
-              <th>TEMPORADA alta</th>
+              <th>TEMPORADA BAJA</th>
+              <th>TEMPORADA MEDIA</th>
+              <th>TEMPORADA ALTA</th>
             </tr>
           </thead>
           <tbody>
@@ -151,19 +153,28 @@
     </section>
     <section id="contact">
       <article class="contact row">
-        <div id="map"></div>
-        <address>
-          Rambla Catalunya 137,
-          08001 Barcelona
-        </address>
-        <p>Phone: 93 218 00 00</p>
-        <form action="" class="contact">
-          <input type="text" class="text" placeholder="Name">
-          <input type="email" class="text" placeholder="Email">
-          <input type="tel" class="text" placeholder="Phone">
-          <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
-          <input type="submit" value="Send">
-        </form>
+        <div id="map-canvas"></div>
+        <div class="box box-small-sq">
+          <h6>El Passatge</h6>
+          <address>
+            Rambla Catalunya 137,<br>
+            08001 Barcelona,<br>
+            Catalonia
+          </address>
+          <p>Phone: 93 218 00 00</p>
+          <p>Fax: 93 218 00 01</p>
+          <p>Email: info@elpassatge.cat</p>
+          <p></p>
+        </div>
+        <div class="box box-xl-long-sq">
+          <form action="" class="contact">
+            <input type="text" class="text" placeholder="Name">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+            <input type="email" class="text" placeholder="Email">
+            <input type="tel" class="text" placeholder="Phone">
+            <input type="submit" value="Send">
+          </form>
+        </div>
       </article>
     </section>
   </main>
@@ -176,13 +187,14 @@
       <li><a href="#">CONTACT</a></li>
     </ul>
     <ul class="footer_menu social">
-      <li class="fb">F</li>
-      <li class="tw">T</li>
-      <li class="in">I</li>
+      <li class="fb"></li>
+      <li class="tw"></li>
+      <li class="in"></li>
     </ul>
     <a class="btn btn-newsletter">Join our newsletter</a>
-    <p class="copyright">Copyright 2014</p>
+    <p class="copyright">© EL PASSATGE.  ALL RIGHTS RESERVED.</p>
   </footer>
+  <script type="text/javascript" src="js/maps.js"></script>
   <script type="text/javascript" src="js/functions.js"></script>
 </body>
 </html>

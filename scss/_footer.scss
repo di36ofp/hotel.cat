@@ -1,0 +1,63 @@
+// Import variables
+@import "_variables";
+
+.footer{
+	margin: 0 auto;
+	text-align: center;
+	background: rgba($secondary-color, .2 );
+	width: 100%;
+	height:$base-unit * 6;
+	.footer_menu{
+	  @include inline-list();
+	  margin: 0 auto;
+	  display: table;
+	  li{
+	    padding: $base-unit / 2 0;
+    a{
+      font-weight: 500;
+      text-transform: uppercase;
+      font-size: $base-unit / 2;
+      text-decoration: none;
+      -webkit-transition: color 300ms ease;
+      transition: color 300ms ease;
+    &:hover,
+    &:focus{
+      color: $link-secondary-color
+    }
+    }
+    &:first-child{
+      margin-left: 0;
+    	}
+		}
+	}
+	.social{
+		display:table;
+		margin: 0 auto;
+		.fb{
+			height: 5px;
+			width: 33px;
+			background-image: url("../img/rrss.png");
+			background-size: 109px 35px;
+			background-position: -38px -2px;
+		}
+		.tw{
+			height: 5px;
+			width: 33px;
+			background-image: url("../img/rrss.png");
+			background-size: 109px 35px;
+			background-position: -2px -2px;
+		}
+		.in{
+			height: 5px;
+			width: 33px;
+			background-image: url("../img/rrss.png");
+			background-size: 109px 35px;
+			background-position: 32px -2px;
+		}
+	}
+	.copyright{
+		clear: both;
+		margin: 0 auto;
+		font-size: 0.7em;
+	}
+}
