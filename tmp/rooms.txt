@@ -1,0 +1,6 @@
+[{"id":"mayor standard","temp_baja":"105","temp_media":"115","temp_alta":"132","square_m":"2000"},
+{"id":"mayor special","temp_baja":"110","temp_media":"125","temp_alta":"140","square_m":"2000"},
+{"id":"mayor deluxe","temp_baja":"120","temp_media":"140","temp_alta":"160","square_m":"2000"},
+{"id":"mayor standard","temp_baja":"105","temp_media":"115","temp_alta":"132","square_m":"2000"},
+{"id":"mayor special","temp_baja":"110","temp_media":"125","temp_alta":"140","square_m":"2000"},
+{"id":"mayor deluxe","temp_baja":"120","temp_media":"140","temp_alta":"160","square_m":"2000"}]

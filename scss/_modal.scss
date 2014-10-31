@@ -1,0 +1,135 @@
+#datepicker{
+  display: none;
+}
+#calendar{
+  width: $base-unit * 23;
+  height: $base-unit * 10;
+  border: none;
+}
+.active{
+  display: block;
+  #datepicker{
+    display: block;
+    position: relative;
+    z-index: 2;
+    background: #fff;
+    padding: $base-unit;
+    .ui-datepicker {
+      width: 250px;
+      height: auto;
+      border-radius: 0;
+      color: $text-color;
+      line-height: 24px;
+      a {
+        text-decoration: none;
+      }
+      table {
+        width: 100%;
+        thead{
+          border: none;
+          font-size: 11px;
+        }
+        tbody{
+          tr{
+            border: none;
+            &:last-child{
+              margin-bottom: 0;
+            }
+          }
+          td{
+            border: none;
+            a,
+            span{
+              line-height: 24px;
+              text-align: center;
+              padding: 0;
+            }
+            &:last-child{
+              margin-right: 0;
+            }
+          }
+        }
+      }
+      .ui-datepicker-header {
+        background: transparent;
+        color: #000;
+        font-size: 14px;
+        font-weight: 100;
+        border: none;
+      }
+      .ui-datepicker-title {
+        text-align: center;
+      }
+      .ui-datepicker-prev,
+      .ui-datepicker-next {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        cursor: pointer;
+        overflow: hidden;
+        &:hover{
+          background: transparent;
+          border: none;
+        }
+      }
+      .ui-datepicker-prev {
+        float: left;
+        background-position: center -30px;
+      }
+      .ui-datepicker-next {
+        float: right;
+        background-position: center 0px;
+      }
+    }
+    .ui-datepicker-calendar{
+      td{
+        width: 29px;
+        &:first-child{
+          .ui-state-active {
+            margin-left: 0;
+          }
+        }
+        &:first-child{
+          .ui-state-active {
+            width: 29px;
+            margin-right: 0;
+          }
+        }
+      }
+      tr{
+        &:last-child{
+          .ui-state-active {
+            width: 29px;
+            margin-bottom: 0;
+          }
+        }
+      }
+      .ui-state-default{
+        background: transparent;
+      }
+      .ui-state-hover,
+      .ui-state-focus{
+        background: #f7f7f7;
+        .ui-icon{
+          background-image: none;
+        }
+      }
+      .ui-state-active{
+        background: $primary-color;
+        color: #e0e0e0;
+      }
+    }
+    .ui-datepicker-unselectable{
+      .ui-state-default {
+        background: #f4f4f4;
+        color: #b4b3b3;
+      }
+    }
+    .ui-widget-content{
+      .ui-state-highlight{
+        border: none;
+      }
+    }
+  }
+}

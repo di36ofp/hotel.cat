@@ -6,16 +6,6 @@
   margin: $base-unit/2 auto ;
   clear: both;
 }
-.logo-nav{
-  display: block;
-  visibility: hidden;
-  float: $default-float;
-  margin-left: $base-unit;
-  height: $base-unit * 1.5;
-  width: 150px;
-  background-image: url(../img/logo.png);
-  background-size: cover;
-}
 .main_menu,{
   @include inline-list();
   margin: 0 auto;
@@ -28,6 +18,8 @@
       font-size: $base-unit / 2;
       text-decoration: none;
       -webkit-transition: color 300ms ease;
+      -moz-transition: color 300ms ease;
+      -o-transition: color 300ms ease;
       transition: color 300ms ease;
       &:hover,
       &:focus{
@@ -46,30 +38,32 @@
   margin-left: $base-unit;
   margin-bottom: $base-unit;
   content: " ";
-  max-width: 100%;//
+  max-width: 100%;
   img{
     max-width: 100%;
+    -webkit-transition: opacity 300ms ease;
+    -moz-transition: opacity 300ms ease;
+    -o-transition: opacity 300ms ease;
+    transition: opacity 300ms ease;
+    &:hover{
+      opacity: 0.6;
+    }
   }
 }
 .box-big-sq{
   width: $base-unit * 15;
-  //height: $base-unit * 15;
 }
 .box-long-sq{
   width: $base-unit * 15;
-  //height: $base-unit * 7;
 }
 .box-xl-long-sq{
   width: $base-unit * 23;
-  //height: $base-unit * 7;
 }
 .box-small-sq{
   width: $base-unit * 7;
-  //height: $base-unit * 7;
 }
 .box-thin-sq{
   width: $base-unit * 7;
-  //height: $base-unit * 15;
   margin-top: -$base-unit * 8;
 }
 .img_container + p{
@@ -90,23 +84,11 @@ p[class*="box"]:first-child{
 .relative-container{
   position: relative;
 }
+.fade{
+  opacity: 0.6;
+}
 #map-canvas{
   width: 100%;
   height: $base-unit * 12;
   margin-bottom: $base-unit;
 }
-/*.social{
-  background-image: url(../img/icons.png);
-  background-repeat: no-repeat;
-  width: $base-unit * 2.5;
-  height: $base-unit * 2.5;
-  .fb{
-    background-position: xpos 0;
-  }
-  .tw{
-    background-position: xpos 0;
-  }
-  .in{
-    background-position: xpos 0;
-  }
-}*/
