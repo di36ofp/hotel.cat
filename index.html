@@ -11,8 +11,38 @@
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 </head>
 <body>
-  <dialog id="calendar">
-    <div id="datepicker"></div>
+  <dialog class="modal">
+    <section class="booking_container">
+      <h2>Welcome! <small>Select your rooms</small></h2>
+      <a href="#" class="close">×</a>
+      <form id="booking-form" action"booking" name="booking-form" class="booking-form">
+        <label for="arrive">Arrive</label>
+        <input type="text" id="arrive">
+        <label for="daparture">Departure</label>
+        <input type="text" id="daparture">
+        <label for="rooms_number">Number of rooms</label>
+        <select name="rooms_number" id="rooms_number">
+          <option value="1">1 Room</option>
+          <option value="2">2 Rooms</option>
+          <option value="3">3 Rooms</option>
+          <option value="4">4 Rooms</option>
+        </select>
+        <label for="adult_number">Adults</label>
+        <select name="adult_number" id="adult_number">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </form>
+      <p>The search returned no results for one of the following reasons:
+      A lack of room availability for the combination of parameters used.
+      There are any restrictions for the selected dates that prevents return results. Should have been reported through a notice in this case.</p>
+      <p>Try to restart the parameters and / or select a different combination of parameters (minimum date of entry and departure) to perform a new search.</p>
+      <a href="#" class="btn btn-next">Next</a>
+      <a href="#" class="btn btn-link cancel-booking">Cancel</a>
+      <!-- <div id="datepicker"></div> -->
+    </section>
   </dialog>
   <header class="header row">
     <a href="#">
