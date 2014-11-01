@@ -169,8 +169,8 @@ p[class*="box"]:first-child {
   margin-bottom: 1.89394em; }
   .btn-newsletter:hover, .btn-newsletter:focus {
     color: #e1e8ec;
-    border-color: red;
-    background: red;
+    border-color: #3d9ccc;
+    background: #3d9ccc;
     outline: none; }
 
 .slider {
@@ -508,3 +508,5 @@ form {
     background-position: 0px 0; }
   .nav_fixed .here {
     color: #e1e8ec; }
+
+/*# sourceMappingURL=main.css.map */
