@@ -11,6 +11,9 @@
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 </head>
 <body>
+  <dialog id="calendar">
+    <div id="datepicker"></div>
+  </dialog>
   <header class="header row">
     <a href="#">
       <img src="img/logo.png" alt="Logo Hotel" class="logo">
@@ -19,16 +22,13 @@
       <a href="#top" class="logo-nav">
       </a>
       <a id="booking" class="btn btn-booking">BOOKING</a>
-      <div id="calendar" class="relative-container">
-        <div id="datepicker"></div>
-      </div>
       <nav class="nav">
         <ul class="main_menu">
-          <li><a id="link_hotel" href="#hotel">HOTEL</a></li>
-          <li><a id="link_rooms" href="#rooms">ROOMS</a></li>
-          <li><a id="link_services" href="#services">SERVICES</a></li>
-          <li><a id="link_rates" href="#rates">RATES</a></li>
-          <li><a id="link_contact" href="#contact">CONTACT</a></li>
+          <li><a href="#top">HOTEL</a></li>
+          <li><a href="#rooms">ROOMS</a></li>
+          <li><a href="#services">SERVICES</a></li>
+          <li><a href="#rates">RATES</a></li>
+          <li><a href="#contact">CONTACT</a></li>
         </ul>
       </nav>
     </div>
@@ -104,22 +104,28 @@
         <p>1 habitación doble de uso individual. Cama 135 x 200
         5 habitaciones dobles. Camas Queen size 160 x 200</p>
         <p>Todas las habitaciones Mayor Standard disponen de conexión gratuita a Internet vía WI-FI, televisión LCD interactiva, amplio baño privado recubierto con cristal de Murano, mini bar, caja de seguridad, climatización con control individualizado, secador de pelo y cuidada selección de amenities.</p>
-        <div id="carousel" class="carousel">
-          <div class="box carousel-lateral-box">
-            <img src="img/desayuno.jpg" alt="images">
+        <section class="carousel-container">
+          <div id="carousel" class="carousel">
+              <figure><img src="img/desayuno.jpg"></figure>
+              <figure><img src="img/entrada.jpg"></figure>
+              <figure><img src="img/recepcion.jpg"></figure>
+              <figure><img src="img/desayuno.jpg"></figure>
+              <figure><img src="img/desayuno.jpg"></figure>
+              <figure><img src="img/desayuno.jpg"></figure>
+              <figure><img src="img/desayuno.jpg"></figure>
+              <figure><img src="img/desayuno.jpg"></figure>
+              <figure><img src="img/desayuno.jpg"></figure>
           </div>
-          <div class="box carousel-central-box">
-            <img src="img/entrada.jpg" alt="images">
-          </div>
-          <div class="box carousel-lateral-box">
-            <img src="img/bar.jpg" alt="images">
-          </div>
-        </div>
+          <p id="navigation">
+            <button id="previous" data-increment="-1">Previous</button>
+            <button id="next" data-increment="1">Next</button>
+          </p>
+        </section>
       </article>
     </section>
     <section id="rates">
       <article class="rates row">
-        <table class="table">
+        <table id="table_rates" class="table">
           <thead>
             <tr>
               <th></th>
@@ -128,26 +134,6 @@
               <th>TEMPORADA ALTA</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <th>MAYOR STANDAR</th>
-              <td>105 €</td>
-              <td>115 €</td>
-              <td>132 €</td>
-            </tr>
-            <tr>
-              <th>MAYOR SPECIAL</th>
-              <td>110 €</td>
-              <td>125 €</td>
-              <td>140 €</td>
-            </tr>
-            <tr>
-              <th>MAYOR DELUXE</th>
-              <td>120 €</td>
-              <td>140 €</td>
-              <td>160 €</td>
-            </tr>
-          </tbody>
         </table>
       </article>
     </section>
