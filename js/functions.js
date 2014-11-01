@@ -1,23 +1,37 @@
 // JavaScript Document
 
 $(document).ready(function () {
-  //$( "#datepicker" ).datepicker();
-  $('#booking').on('click', function () {
+
+  $('#booking,.close,.cancel-booking').on('click', toggleModal);
+  $('#arrive,#departure').on('focus', showDatePicker);
+
+  function toggleModal() {
+    $("body").toggleClass('modal-enabled');
     $("dialog").toggleClass('active');
     $("header,main,footer").toggleClass('fade');
-  })
-  $('#datepicker').datepicker({
-      dateFormat: 'yy-m-d',
-      inline: true,
-      minDate: 0,
-      onSelect: function(dateText, inst) {
-          var date = $(this).datepicker('getDate'),
-              day  = date.getDate(),
-              month = date.getMonth() + 1,
-              year =  date.getFullYear();
-          alert(day + '-' + month + '-' + year);
-      }
-  });
+  }
+
+  function showDatePicker() {
+    if ( $('#datepicker').length <= 0 ){
+      var datePicker = document.createElement('div');
+      datePicker.setAttribute('id', "datepicker");
+      var parentDatePicker = document.getElementById('booking-form');
+      parentDatePicker.appendChild(datePicker);
+
+      $('#datepicker').datepicker({
+          dateFormat: 'yy-m-d',
+          inline: true,
+          minDate: 0,
+          onSelect: function(dateText, inst) {
+              var date = $(this).datepicker('getDate'),
+                  day  = date.getDate(),
+                  month = date.getMonth() + 1,
+                  year =  date.getFullYear();
+              alert(day + '-' + month + '-' + year);
+          }
+      });
+    }
+  }
 
   $( window ).scroll(function() {
     if(window.scrollY > 130){
@@ -49,6 +63,8 @@ $(document).ready(function () {
       }
     }
   });
+
+  /////////////////////////////////////////
   var rooms;
   var table = document.getElementById('table_rates');
   var http_request = new XMLHttpRequest();
@@ -57,12 +73,12 @@ $(document).ready(function () {
     var done = 4, ok = 200;
     if (http_request.readyState === done && http_request.status === ok) {
         rooms = JSON.parse(http_request.responseText);
-        init();
+        initialize();
     }
   };
   http_request.send(null);
 
-  function init(){
+  function initialize(){
     rooms.forEach(function ( index ) {
       draw(index);
     })
