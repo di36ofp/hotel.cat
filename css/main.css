@@ -183,8 +183,8 @@ p[class*="box"]:first-child {
   margin-bottom: 1.89394em; }
   .btn-newsletter:hover, .btn-newsletter:focus {
     color: #e1e8ec;
-    border-color: red;
-    background: red;
+    border-color: #3d9ccc;
+    background: #3d9ccc;
     outline: none; }
 
 .slider {
@@ -408,3 +408,5 @@ form {
     transition-property: color, background, opacity;
     transition-delay: 0s;
     transition-timing-function: 'ease-in-out'; }
+
+/*# sourceMappingURL=main.css.map */

@@ -38,8 +38,8 @@
   &:hover,
   &:focus{
     color: $link-secondary-color;
-    border-color: red;
-    background: red;
+    border-color: $link-secondary-border;
+    background: $link-secondary-border;
     outline: none;
   }
 }
