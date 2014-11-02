@@ -1,0 +1,35 @@
+// Import variables
+@import "_variables";
+
+.logo-nav{
+  display: block;
+  visibility: hidden;
+  float: $default-float;
+  margin-left: $base-unit;
+  height: $base-unit * 1.5;
+  width: 150px;
+  background-image: url(../img/logo.png);
+  background-position: -150px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.nav_fixed{
+  position: fixed;
+  top: 0;
+  width: $base-unit * 33;
+  z-index: 5;
+  background: #fff;
+  border-top: 0;
+  -webkit-box-shadow: 0px 2px 2px 0px rgba(50, 50, 50, 0.2);
+  -moz-box-shadow:    0px 2px 2px 0px rgba(50, 50, 50, 0.2);
+  box-shadow:         0px 2px 2px 0px rgba(50, 50, 50, 0.2);
+  .logo-nav{
+    visibility: visible;
+    background-position: 0px 0;
+  }
+  .here{
+    color: $link-secondary-color;
+  }
+}

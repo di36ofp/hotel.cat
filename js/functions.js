@@ -1,86 +1,128 @@
-(function(funcName, baseObj) {
-    // The public function name defaults to window.docReady
-    // but you can pass in your own object and own function name and those will be used
-    // if you want to put them in a different namespace
-    funcName = funcName || "docReady";
-    baseObj = baseObj || window;
-    var readyList = [];
-    var readyFired = false;
-    var readyEventHandlersInstalled = false;
+// JavaScript Document
 
-    // call this when the document is ready
-    // this function protects itself against being called more than once
-    function ready() {
-        if (!readyFired) {
-            // this must be set to true before we start calling callbacks
-            readyFired = true;
-            for (var i = 0; i < readyList.length; i++) {
-                // if a callback here happens to add new ready handlers,
-                // the docReady() function will see that it already fired
-                // and will schedule the callback to run right after
-                // this event loop finishes so all handlers will still execute
-                // in order and no new ones will be added to the readyList
-                // while we are processing the list
-                readyList[i].fn.call(window, readyList[i].ctx);
-            }
-            // allow any closures held by these functions to free
-            readyList = [];
-        }
+$(document).ready(function () {
+
+  $('#booking,.close,.cancel-booking').on('click', toggleModal);
+  $('#arrive,#departure').on('focus', showDatePicker);
+
+  function toggleModal() {
+    $("body").toggleClass('modal-enabled');
+    $("dialog").toggleClass('active');
+    $("header,main,footer").toggleClass('fade');
+  }
+
+  function showDatePicker() {
+    if ( $('#datepicker').length <= 0 ){
+      var datePicker = document.createElement('div');
+      datePicker.setAttribute('id', "datepicker");
+      var parentDatePicker = document.getElementById('booking-form');
+      parentDatePicker.appendChild(datePicker);
+
+      $('#datepicker').datepicker({
+          dateFormat: 'yy-m-d',
+          inline: true,
+          minDate: 0,
+          onSelect: function(dateText, inst) {
+              var date = $(this).datepicker('getDate'),
+                  day  = date.getDate(),
+                  month = date.getMonth() + 1,
+                  year =  date.getFullYear();
+              alert(day + '-' + month + '-' + year);
+          }
+      });
+    }
+  }
+
+  $( window ).scroll(function() {
+    if(window.scrollY > 130){
+      $('.nav_container').addClass('nav_fixed');
+      $('.slider').addClass('margined-top');
+    }
+    if(window.scrollY < 130){
+      $('.here').removeClass();
+      $('.nav_container').removeClass('nav_fixed');
+      $('.slider').removeClass('margined-top');
+    }
+  });
+  $('a[href=#top]').click(function(e) {
+    e.preventDefault;
+    $('html, body').animate({scrollTop:0}, 'slow');
+    return false;
+  });
+  $('a[href*=#]:not([href=#])').click(function() {
+    $('.here').removeClass();
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top - 70
+        }, 1000);
+        $(this).toggleClass('here');
+        return false;
+      }
+    }
+  });
+
+  /////////////////////////////////////////
+  var rooms;
+  var table = document.getElementById('table_rates');
+  var http_request = new XMLHttpRequest();
+  http_request.open("GET", "http://localhost:8888/hotel.cat/tmp/rooms.txt", true);
+  http_request.onreadystatechange = function () {
+    var done = 4, ok = 200;
+    if (http_request.readyState === done && http_request.status === ok) {
+        rooms = JSON.parse(http_request.responseText);
+        initialize();
+    }
+  };
+  http_request.send(null);
+
+  function initialize(){
+    rooms.forEach(function ( index ) {
+      draw(index);
+    })
+  }
+  function draw( obj ) {
+    var tbody = document.createElement('tbody');
+    var tr = document.createElement('tr');
+    var th = document.createElement('th');
+    var thId = document.createElement('th');
+    var tdBaja = document.createElement('td');
+    var tdMedia = document.createElement('td');
+    var tdAlta = document.createElement('td');
+    thId.innerHTML = obj.id;
+    tdBaja.innerHTML = obj.temp_baja;
+    tdMedia.innerHTML = obj.temp_media;
+    tdAlta.innerHTML = obj.temp_alta;
+
+    tr.appendChild(thId);
+    tr.appendChild(tdBaja);
+    tr.appendChild(tdMedia);
+    tr.appendChild(tdAlta);
+    tbody.appendChild(tr);
+    table.appendChild(tbody);
+  }
+
+  /////////////////////////////////////////
+  var init = function() {
+    var carousel = document.getElementById('carousel'),
+        navButtons = document.querySelectorAll('#navigation button'),
+        panelCount = carousel.children.length,
+        //transformProp = Modernizr.prefixed('transform'),
+        theta = 0,
+
+        onNavButtonClick = function( event ){
+          var increment = parseInt( event.target.getAttribute('data-increment') );
+          theta += ( 360 / panelCount ) * increment * -1;
+          carousel.style[ 'transform' ] = 'translateZ( -288px ) rotateY(' + theta + 'deg)';
+        };
+
+    for (var i=0; i < 2; i++) {
+      navButtons[i].addEventListener( 'click', onNavButtonClick, false);
     }
 
-    function readyStateChange() {
-        if ( document.readyState === "complete" ) {
-            ready();
-        }
-    }
+  };
 
-    // This is the one public interface
-    // docReady(fn, context);
-    // the context argument is optional - if present, it will be passed
-    // as an argument to the callback
-    baseObj[funcName] = function(callback, context) {
-        // if ready has already fired, then just schedule the callback
-        // to fire asynchronously, but right away
-        if (readyFired) {
-            setTimeout(function() {callback(context);}, 1);
-            return;
-        } else {
-            // add the function and context to the list
-            readyList.push({fn: callback, ctx: context});
-        }
-        // if document already ready to go, schedule the ready function to run
-        if (document.readyState === "complete") {
-            setTimeout(ready, 1);
-        } else if (!readyEventHandlersInstalled) {
-            // otherwise if we don't have event handlers installed, install them
-            if (document.addEventListener) {
-                // first choice is DOMContentLoaded event
-                document.addEventListener("DOMContentLoaded", ready, false);
-                // backup is window load event
-                window.addEventListener("load", ready, false);
-            } else {
-                // must be IE
-                document.attachEvent("onreadystatechange", readyStateChange);
-                window.attachEvent("onload", ready);
-            }
-            readyEventHandlersInstalled = true;
-        }
-    }
-})("docReady", window);
-
-docReady(function() {
-  // add event listener to table
-  var el = document.getElementById('booking');
-  var calendar = document.getElementById('calendar');
-  el.addEventListener('click', function ( event ){
-    event.preventDefault();
-    calendar.classList.toggle('active');
-  }, false);
-  
-  // var slider = document.getElementById('slider');
-  // slider.addEventListener('click', function ( event ){
-  //   event.preventDefault();
-  //   slider.classList.toggle('active');
-  // }, false);
-
-});
+  window.addEventListener( 'DOMContentLoaded', init, false);
+})

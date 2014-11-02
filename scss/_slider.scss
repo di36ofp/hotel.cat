@@ -59,5 +59,7 @@
    90% { left: 0px; opacity: 1; }
    100%{ left: $row; opacity: 0; }
 }
-
+.margined-top{
+  margin-top: $base-unit * 1.5;
+}
 

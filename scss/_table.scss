@@ -7,9 +7,18 @@
 }
 .table{
   text-align: center;
-  margin: 0 auto;
+  margin: 0 auto $base-unit;
   border-collapse: collapse;
   font-size: 0.9em;
+  thead{
+    tr{
+      th{
+        &:first-child{
+          visibility: hidden;
+        }
+      }
+    }
+  }
   th,
   td {
     border: 1px solid $primary-color;

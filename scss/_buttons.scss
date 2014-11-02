@@ -11,6 +11,7 @@
   border-style: solid;
   font-weight: 500;
   text-transform: uppercase;
+  text-decoration: none;
   font-size: $base-unit / 2;
 }
 .btn-booking {
@@ -33,11 +34,31 @@
 }
 .btn-newsletter{
   @extend .btn-booking;
+  float: none;
+  margin-bottom: $base-unit;
   &:hover,
   &:focus{
     color: $link-secondary-color;
-    border-color: red;
-    background: red;
+    border-color: $link-secondary-border;
+    background: $link-secondary-border;
     outline: none;
   }
+}
+.btn-next{
+  float: $opposite-direction;
+  background: $success-color;
+  margin-bottom: $base-unit;
+  border-color: $success-color;
+  color: #fff;
+  &:hover,
+  &:focus{
+    color: $link-secondary-color;
+    background: $success-color;
+    outline: none;
+  }
+}
+.btn-link{
+  float: $opposite-direction;
+  border: none;
+  font-size: smaller;
 }
