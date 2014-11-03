@@ -133,6 +133,9 @@ p[class*="box"]:first-child {
 .fade {
   opacity: 0.3; }
 
+.invisible {
+  visibility: hidden; }
+
 #map-canvas {
   width: 100%;
   height: 22.72728em;
@@ -680,6 +683,58 @@ form, .modal .booking_container .booking-form {
     background-position: 0px 0; }
   .nav_fixed .here {
     color: #e1e8ec; }
+
+.booking_title {
+  padding: 0.63131em;
+  font-size: 1.89394em; }
+
+.breadcrum {
+  padding: 0.94697em 0.63131em;
+  margin-bottom: 1.89394em;
+  list-style: none; }
+  .breadcrum > li {
+    float: left; }
+    .breadcrum > li a {
+      padding: 0 0.47349em;
+      text-decoration: none;
+      color: #c1c1c1; }
+      .breadcrum > li a.here {
+        color: #727175; }
+    .breadcrum > li:after {
+      content: "/"; }
+    .breadcrum > li:last-child:after {
+      content: ""; }
+
+.booking_table {
+  margin: 0 auto 1.89394em;
+  width: 100%;
+  padding: 1.89394em; }
+  .booking_table tr {
+    border-top: #FFF solid 1px; }
+    .booking_table tr th {
+      background-color: rgba(50, 127, 166, 0.9); }
+    .booking_table tr:hover {
+      background-color: rgba(50, 127, 166, 0.9); }
+  .booking_table td {
+    background-color: rgba(161, 207, 230, 0.2);
+    padding: 15px; }
+    .booking_table td:first-child {
+      text-align: right; }
+
+dl dt {
+  float: left;
+  width: 11.36364em;
+  height: 2.27273em;
+  padding: 0 0.94697em 0.63131em;
+  font-weight: bolder; }
+dl dd {
+  min-height: 2.27273em;
+  clear: right;
+  padding: 0 0.94697em 0.63131em; }
+  dl dd#id {
+    text-transform: capitalize; }
+  dl dd#desc {
+    font-size: 14px; }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 750px) {

@@ -1,0 +1,70 @@
+@import "_variables";
+.booking_title{
+  padding: $base-unit / 3;
+  font-size: $base-unit;
+}
+.breadcrum{
+  padding: $base-unit / 2 $base-unit / 3;
+  margin-bottom: $base-unit;
+  list-style: none;
+  &>li{
+    float: $default-float;
+    a{
+      padding: 0 $base-unit / 4;
+      text-decoration: none;
+      color: #c1c1c1;
+      &.here{
+        color: $text-color;
+      }
+    }
+    &:after{
+      content: "/";
+    }
+    &:last-child{
+      &:after{
+        content: "";
+      }
+    }
+  }
+}
+.booking_table {
+  margin: 0 auto $base-unit;
+  width: 100%;
+  padding:$base-unit;
+  tr{
+    th{
+      background-color: $primary-color;
+    }
+		border-top: #FFF solid 1px;
+		&:hover{
+			background-color: $primary-color;
+		}
+	}
+	td{
+    background-color: rgba($secondary-color, .2 );
+		padding:15px;
+		&:first-child{
+			text-align: right;
+		}
+	}
+}
+dl{
+  dt{
+    float: $default-float;
+    width: $base-unit * 6;
+    height: $base-unit * 1.2;
+    padding: 0 $base-unit / 2 $base-unit / 3;
+    font-weight: bolder;
+  }
+  dd{
+    min-height: $base-unit * 1.2;
+    clear: $opposite-direction;
+    padding: 0 $base-unit / 2 $base-unit / 3;
+    &#id{
+      text-transform: capitalize;
+    }
+    &#desc{
+      font-size: 14px;
+    }
+  }
+}

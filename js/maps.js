@@ -40,11 +40,13 @@ function initialize() {
   map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
 
-  var marker = new google.maps.Marker({
-        position: barcelona,
-        map: map,
-        title: 'Hello World!'
+  var image = 'img/logo_hotel_map.png';
+  var hotelMarker = new google.maps.Marker({
+      position: barcelona,
+      map: map,
+      icon: image
   });
+
   var styledMapOptions = {
     name: 'Custom Style'
   };

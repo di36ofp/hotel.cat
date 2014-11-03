@@ -43,8 +43,8 @@ $(document).ready(function () {
         showDatePicker ('arrive');
     }, false);
 
-    document.getElementById('daparture').addEventListener('focus', function () {
-        showDatePicker ('daparture');
+    document.getElementById('departure').addEventListener('focus', function () {
+        showDatePicker ('departure');
     }, false);
   }());
   /*
@@ -65,9 +65,11 @@ $(document).ready(function () {
                           }
                         });
     }
-    document.getElementById('booking_next').addEventListener('click', function () {
+    if( $( "#booking_next").length ){
+      document.getElementById('booking_next').addEventListener('click', function () {
         doNext ();
-    }, false);
+      }, false);
+    }
   }());
   /*
    * Retrieve data from URL
@@ -89,10 +91,37 @@ $(document).ready(function () {
 
     if( $( "#booking_table" ).length){
       for (var prop in qs) {
-        console.log(prop + " " +qs[prop]);
+        var tmp = prop;
+        var tmp = document.getElementById( prop );
+        tmp.innerHTML = qs[prop];
       }
+      var room_number = qs["rooms_number"];
     }
 
+    var rooms;
+    var http_request = new XMLHttpRequest();
+    http_request.open("GET", "http://localhost:8888/hotel.cat/tmp/rooms.txt", true);
+    http_request.onreadystatechange = function () {
+      var done = 4, ok = 200;
+      if (http_request.readyState === done && http_request.status === ok) {
+          rooms =  JSON.parse(http_request.responseText);
+          print_room();
+      }
+    }
+    http_request.send(null);
+
+    function print_room () {
+      var room_name = document.getElementById('id');
+      room_name.innerHTML = rooms[room_number].id;
+      var temp_baja = document.getElementById('temp_baja');
+      temp_baja.innerHTML = rooms[room_number].temp_baja + " €";
+      var temp_media = document.getElementById('temp_media');
+      temp_media.innerHTML = rooms[room_number].temp_media + " €";
+      var temp_alta = document.getElementById('temp_alta');
+      temp_alta.innerHTML = rooms[room_number].temp_alta + " €";
+      var desc = document.getElementById('desc');
+      desc.innerHTML = rooms[room_number].desc;
+    }
   }());
   /*
    * Navigation effects
@@ -133,8 +162,9 @@ $(document).ready(function () {
    * Rooms pricing
    */
   (function () {
-    var rooms;
+
     var table = document.getElementById('table_rates');
+    var rooms;
     var http_request = new XMLHttpRequest();
     http_request.open("GET", "http://localhost:8888/hotel.cat/tmp/rooms.txt", true);
     http_request.onreadystatechange = function () {
@@ -196,7 +226,9 @@ $(document).ready(function () {
       }
 
     };
-
-    window.addEventListener( 'DOMContentLoaded', init, false);
+    window.addEventListener( 'DOMContentLoaded', isCarousel, false);
+    function isCarousel (){
+      init();
+    }
   }());
 })

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Hotel</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/utiles.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+</head>
+<body>
+  <header class="header row">
+    <a href="/hotel.cat">
+      <img src="img/logo.png" alt="Logo Hotel" class="logo">
+    </a>
+    <div class="nav_container">
+      <a href="#top" class="logo-nav">
+      </a>
+      <a id="booking" class="btn btn-booking invisible">BOOKING</a>
+      <nav class="nav">
+        <ul class="main_menu">
+          <li><a href="http://localhost:8888/hotel.cat#top">HOTEL</a></li>
+          <li><a href="http://localhost:8888/hotel.cat#rooms">ROOMS</a></li>
+          <li><a href="http://localhost:8888/hotel.cat#services">SERVICES</a></li>
+          <li><a href="http://localhost:8888/hotel.cat#rates">RATES</a></li>
+          <li><a href="http://localhost:8888/hotel.cat#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="main">
+    <section id="booking_table" class="row">
+      <h1 class="booking_title">Your Booking!</h1>
+      <ul class="breadcrum">
+        <li><a href="#" class="here">Choose room</a></li>
+        <li><a href="#">Personal info</a></li>
+        <li><a href="#">Payment and summary</a></li>
+      </ul>
+      <div class="box box-long-sq">
+        <table class="booking_table">
+          <tbody>
+            <tr>
+              <th>Arrival Date:</th>
+              <td id="arrive"></td>
+            </tr>
+            <tr>
+              <th>Departure Date:</th>
+              <td id="departure"></td>
+            </tr>
+            <tr>
+              <th>Room Name:</th>
+              <td id="rooms_number"></td>
+            </tr>
+            <tr>
+              <th>Pax:</th>
+              <td id="adult_number"></td>
+            </tr>
+          </tbody>
+        </table>
+        <dl>
+          <dt>Room Name</dt>
+            <dd id="id"></dd>
+          <dt>Low Season</dt>
+            <dd id="temp_baja"></dd>
+          <dt>Medium Season</dt>
+            <dd id="temp_media"></dd>
+          <dt>High Season</dt>
+          <dd id="temp_alta"></dd>
+          <dt>Description</dt>
+          <dd id="desc"></dd>
+        </dl>
+        <a href="#" id="booking_next" class="btn btn-next">Next</a>
+        <a href="#" class="btn btn-link cancel-booking">Cancel</a>
+      </div>
+      <div class="box box-long-sq">
+        <img src="img/entrada.jpg">
+      </div>
+    </section>
+  </main>
+  <footer class="footer row">
+    <ul class="footer_menu">
+      <li><a href="hotel.html#top">HOTEL</a></li>
+      <li><a href="hotel.html#rooms">ROOMS</a></li>
+      <li><a href="hotel.html#services">SERVICES</a></li>
+      <li><a href="hotel.html#rates">RATES</a></li>
+      <li><a href="hotel.html#contact">CONTACT</a></li>
+    </ul>
+    <ul class="footer_menu social">
+      <li class="fb"></li>
+      <li class="tw"></li>
+      <li class="in"></li>
+    </ul>
+    <a class="btn btn-newsletter">Join our newsletter</a>
+    <p class="copyright">© EL PASSATGE.  ALL RIGHTS RESERVED.</p>
+  </footer>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.ui.js"></script>
+  <script type="text/javascript" src="js/maps.js"></script>
+  <script type="text/javascript" src="js/functions.js"></script>
+</body>
+</html>

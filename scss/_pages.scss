@@ -90,6 +90,9 @@ p[class*="box"]:first-child{
 .fade{
   opacity: 0.3;
 }
+.invisible{
+  visibility: hidden;
+}
 #map-canvas{
   width: 100%;
   height: $base-unit * 12;
