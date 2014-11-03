@@ -159,6 +159,7 @@ $(document).ready(function () {
           tdBaja = document.createElement('td'),
           tdMedia = document.createElement('td'),
           tdAlta = document.createElement('td');
+
       thId.innerHTML = obj.id;
       tdBaja.innerHTML = obj.temp_baja;
       tdMedia.innerHTML = obj.temp_media;
@@ -176,18 +177,19 @@ $(document).ready(function () {
    * Carousel
    */
   (function () {
-    var init = function() {
-      var carousel = document.getElementById('carousel'),
-          navButtons = document.querySelectorAll('#navigation button'),
-          panelCount = carousel.children.length,
-          //transformProp = Modernizr.prefixed('transform'),
-          theta = 0,
 
-          onNavButtonClick = function( event ){
-            var increment = parseInt( event.target.getAttribute('data-increment') );
-            theta += ( 360 / panelCount ) * increment * -1;
-            carousel.style[ 'transform' ] = 'translateZ( -288px ) rotateY(' + theta + 'deg)';
-          };
+    var init = function() {
+    var carousel = document.getElementById('carousel'),
+        navButtons = document.querySelectorAll('#navigation img'),
+        panelCount = carousel.children.length,
+        //transformProp = Modernizr.prefixed('transform'),
+        theta = 0,
+
+        onNavButtonClick = function( event ){
+          var increment = parseInt( event.target.getAttribute('data-increment') );
+          theta += ( 360 / panelCount ) * increment * -1;
+          carousel.style.transform = 'rotateY(' + theta + 'deg)';
+        };
 
       for (var i=0; i < 2; i++) {
         navButtons[i].addEventListener( 'click', onNavButtonClick, false);
