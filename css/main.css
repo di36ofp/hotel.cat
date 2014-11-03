@@ -94,7 +94,9 @@ a {
     -o-transition: opacity 300ms ease;
     transition: opacity 300ms ease; }
     .box img:hover {
-      opacity: 0.6; }
+      opacity: 0.4; }
+      .box img:hover + .rooms_coment {
+        display: block; }
 
 .box-big-sq {
   width: 28.4091em; }
@@ -189,6 +191,14 @@ p[class*="box"]:first-child {
   float: right;
   border: none;
   font-size: smaller; }
+
+.rooms_coment {
+  display: none;
+  bottom: 0;
+  position: absolute;
+  padding: 1em;
+  background: rgba(255, 255, 255, 0.8);
+  width: 100%; }
 
 .slider {
   list-style: none;
@@ -326,7 +336,7 @@ form, .modal .booking_container .booking-form {
     font-size: 14px;
     vertical-align: middle;
     cursor: pointer;
-    background: #000;
+    background: rgba(50, 127, 166, 0.9);
     border: none;
     color: #fff; }
   form textarea, .modal .booking_container .booking-form textarea {
