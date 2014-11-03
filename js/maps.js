@@ -29,7 +29,7 @@ function initialize() {
   ];
 
   var mapOptions = {
-    zoom: 14,
+    zoom: 15,
     center: barcelona,
     mapTypeControlOptions: {
       mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
@@ -40,6 +40,11 @@ function initialize() {
   map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
 
+  var marker = new google.maps.Marker({
+        position: barcelona,
+        map: map,
+        title: 'Hello World!'
+  });
   var styledMapOptions = {
     name: 'Custom Style'
   };

@@ -1,0 +1,35 @@
+// Import variables
+@import "_variables";
+
+$max-responsive: 750px;
+/* Landscape phone to portrait tablet */
+@media (max-width: $max-responsive) {
+  .header,
+  .main,
+  .footer{
+    width: $max-responsive;
+    overflow: hidden;
+  }
+  .logo{
+    display: none;
+  }
+  .logo-nav{
+    visibility: visible;
+    background-position: 0 0;
+  }
+  .main_menu{
+    &>li{
+      margin-#{$default-float}: $base-unit/4;
+    }
+  }
+  .rooms{
+    .box{
+      max-width: 100%;
+      margin: 0 auto $base-unit;
+      float: none;
+      img{
+        width: 100%;
+      }
+    }
+  }
+}

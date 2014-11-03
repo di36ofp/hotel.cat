@@ -62,9 +62,6 @@ $(document).ready(function () {
                           counter++;
                           if ( !error  && max_inputs == counter ){
                             $( '#booking-form' ).submit();
-                          }else{
-                            console.log(error);
-                            return false;
                           }
                         });
     }
@@ -90,9 +87,12 @@ $(document).ready(function () {
         return b;
     })(window.location.search.substr(1).split('&'));
 
-    for (var prop in qs) {
-      console.log(prop + " " +qs[prop]);
+    if( $( "#booking_table" ).length){
+      for (var prop in qs) {
+        console.log(prop + " " +qs[prop]);
+      }
     }
+
   }());
   /*
    * Navigation effects
@@ -102,18 +102,18 @@ $(document).ready(function () {
       if(window.scrollY > 130){
         $('.nav_container').addClass('nav_fixed');
         $('.slider').addClass('margined-top');
-      }
-      if(window.scrollY < 130){
-        $('.here').removeClass();
+      }else{
         $('.nav_container').removeClass('nav_fixed');
         $('.slider').removeClass('margined-top');
       }
     });
+
     $('a[href=#top]').click(function(e) {
       e.preventDefault;
       $('html, body').animate({scrollTop:0}, 'slow');
       return false;
     });
+
     $('a[href*=#]:not([href=#])').click(function() {
       $('.here').removeClass();
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {

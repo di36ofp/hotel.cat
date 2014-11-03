@@ -3,7 +3,7 @@
 
 .mask{
   overflow: hidden;
-  width: $row;
+  max-width: 100%;
   height: $base-unit * 17;
   ul {
     position: relative;

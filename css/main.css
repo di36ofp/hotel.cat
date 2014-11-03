@@ -11,7 +11,7 @@ a {
 .header,
 .main,
 .footer {
-  width: 100%;
+  width: 62.5em;
   max-width: 62.5em;
   margin: 0 auto;
   background: white; }
@@ -202,7 +202,7 @@ p[class*="box"]:first-child {
 
 .mask {
   overflow: hidden;
-  width: 62.50002em;
+  max-width: 100%;
   height: 32.19698em; }
   .mask ul {
     position: relative; }
@@ -228,76 +228,96 @@ p[class*="box"]:first-child {
 @-webkit-keyframes cycle {
   0% {
     left: 0px; }
+
   25% {
     left: 0px;
     opacity: 1;
     z-index: 0; }
+
   35% {
     left: 62.50002em;
     opacity: 0;
     z-index: 0; }
+
   50% {
     left: 62.50002em;
     opacity: 0;
     z-index: -1; }
+
   80% {
     left: -62.50002em;
     opacity: 0; }
+
   90% {
     left: -62.50002em;
     opacity: 0;
     z-index: 0; }
+
   100% {
     left: 0px;
     opacity: 1; } }
+
 @-webkit-keyframes cycletwo {
   0% {
     left: -62.50002em;
     opacity: 0; }
+
   25% {
     left: -62.50002em;
     opacity: 0;
     z-index: 0; }
+
   35% {
     left: 0px;
     opacity: 1; }
+
   60% {
     left: 0px;
     opacity: 1;
     z-index: 0; }
+
   70% {
     left: 62.50002em;
     opacity: 0;
     z-index: 0; }
+
   90% {
     left: 62.50002em;
     opacity: 0;
     z-index: -1; }
+
   100% {
     left: -62.50002em;
     opacity: 0; } }
+
 @-webkit-keyframes cyclethree {
   0% {
     left: 62.50002em;
     opacity: 0;
     z-index: -1; }
+
   10% {
     left: -62.50002em;
     opacity: 0;
     z-index: -1; }
+
   60% {
     left: -62.50002em;
     opacity: 0;
     z-index: 0; }
+
   70% {
     left: 0px;
     opacity: 1; }
+
   90% {
     left: 0px;
     opacity: 1; }
+
   100% {
     left: 62.50002em;
     opacity: 0; } }
+
 .margined-top {
   margin-top: 2.84091em; }
 
@@ -660,3 +680,28 @@ form, .modal .booking_container .booking-form {
     background-position: 0px 0; }
   .nav_fixed .here {
     color: #e1e8ec; }
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 750px) {
+  .header,
+  .main,
+  .footer {
+    width: 750px;
+    overflow: hidden; }
+
+  .logo {
+    display: none; }
+
+  .logo-nav {
+    visibility: visible;
+    background-position: 0 0; }
+
+  .main_menu > li {
+    margin-left: 0.47349em; }
+
+  .rooms .box {
+    max-width: 100%;
+    margin: 0 auto 1.89394em;
+    float: none; }
+    .rooms .box img {
+      width: 100%; } }
