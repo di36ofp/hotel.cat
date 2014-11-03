@@ -46,7 +46,10 @@
     -o-transition: opacity 300ms ease;
     transition: opacity 300ms ease;
     &:hover{
-      opacity: 0.6;
+      opacity: 0.4;
+      &+.rooms_coment{
+        display: block;
+      }
     }
   }
 }
