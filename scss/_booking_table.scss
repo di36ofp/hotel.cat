@@ -1,0 +1,20 @@
+@import "_variables";
+
+.booking_table {
+  margin: auto;
+  width: 100%;
+  padding:15px;
+  tr{
+		background-color: rgba($secondary-color, .2 );
+		border-top: #FFF solid 1px;
+		&:hover{
+			background-color: $primary-color;
+		}
+	}
+	td{
+		padding:15px;
+		&:first-child{
+			text-align: right;
+		}
+	}
+}

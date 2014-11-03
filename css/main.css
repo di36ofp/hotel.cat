@@ -660,3 +660,19 @@ form, .modal .booking_container .booking-form {
     background-position: 0px 0; }
   .nav_fixed .here {
     color: #e1e8ec; }
+
+.booking_table {
+  margin: auto;
+  width: 100%;
+  padding: 15px; }
+  .booking_table tr {
+    background-color: rgba(161, 207, 230, 0.2);
+    border-top: #FFF solid 1px; }
+    .booking_table tr:hover {
+      background-color: rgba(50, 127, 166, 0.9); }
+  .booking_table td {
+    padding: 15px; }
+    .booking_table td:first-child {
+      text-align: right; }
+
+/*# sourceMappingURL=main.css.map */
