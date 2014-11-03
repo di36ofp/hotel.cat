@@ -107,7 +107,7 @@ $(document).ready(function () {
   /////////////////////////////////////////
   var init = function() {
     var carousel = document.getElementById('carousel'),
-        navButtons = document.querySelectorAll('#navigation button'),
+        navButtons = document.querySelectorAll('#navigation img'),
         panelCount = carousel.children.length,
         //transformProp = Modernizr.prefixed('transform'),
         theta = 0,
@@ -115,7 +115,7 @@ $(document).ready(function () {
         onNavButtonClick = function( event ){
           var increment = parseInt( event.target.getAttribute('data-increment') );
           theta += ( 360 / panelCount ) * increment * -1;
-          carousel.style[ 'transform' ] = 'translateZ( -288px ) rotateY(' + theta + 'deg)';
+          carousel.style.transform = 'rotateY(' + theta + 'deg)';
         };
 
     for (var i=0; i < 2; i++) {
