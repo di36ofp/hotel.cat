@@ -86,7 +86,7 @@
 }
 .active{
   display: block;
-  #datepicker{
+  div[id*="datepicker"]{
     display: block;
     position: absolute;
     top: 1.59em;
