@@ -17,11 +17,12 @@
       <a href="#" class="close">×</a>
       <form id="booking-form" action"booking" name="booking-form" class="booking-form">
         <label for="arrive">Arrive</label>
-        <input type="text" id="arrive">
+        <input type="text" id="arrive" name="arrive">
         <label for="daparture">Departure</label>
-        <input type="text" id="daparture">
+        <input type="text" id="daparture" name="departure">
         <label for="rooms_number">Number of rooms</label>
         <select name="rooms_number" id="rooms_number">
+          <option value="" disabled selected>Select your option</option>
           <option value="1">1 Room</option>
           <option value="2">2 Rooms</option>
           <option value="3">3 Rooms</option>
@@ -29,6 +30,7 @@
         </select>
         <label for="adult_number">Adults</label>
         <select name="adult_number" id="adult_number">
+          <option value="" disabled selected>Select your option</option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -39,13 +41,12 @@
       A lack of room availability for the combination of parameters used.
       There are any restrictions for the selected dates that prevents return results. Should have been reported through a notice in this case.</p>
       <p>Try to restart the parameters and / or select a different combination of parameters (minimum date of entry and departure) to perform a new search.</p>
-      <a href="#" class="btn btn-next">Next</a>
+      <a href="#" id="booking_next" class="btn btn-next">Next</a>
       <a href="#" class="btn btn-link cancel-booking">Cancel</a>
-      <!-- <div id="datepicker"></div> -->
     </section>
   </dialog>
   <header class="header row">
-    <a href="#">
+    <a href="/hotel.cat">
       <img src="img/logo.png" alt="Logo Hotel" class="logo">
     </a>
     <div class="nav_container">
@@ -157,7 +158,7 @@
         <p>La opción más sencilla. Un espacio pensado para su comodidad y hacer de su estancia una recopilación de momentos agradables. El máximo nivel de accesibilidad, con todo a su alcance. La mejor manera de relajarse en un ambiente ligero. La naturalidad hecha placer.</p>
         <p>1 habitación doble de uso individual. Cama 135 x 200
         5 habitaciones dobles. Camas Queen size 160 x 200</p>
-        <p>Todas las habitaciones Mayor Standard disponen de conexión gratuita a Internet vía WI-FI, televisión LCD interactiva, amplio baño privado recubierto con cristal de Murano, mini bar, caja de seguridad, climatización con control individualizado, secador de pelo y cuidada selección de amenities.</p>        
+        <p>Todas las habitaciones Mayor Standard disponen de conexión gratuita a Internet vía WI-FI, televisión LCD interactiva, amplio baño privado recubierto con cristal de Murano, mini bar, caja de seguridad, climatización con control individualizado, secador de pelo y cuidada selección de amenities.</p>
         <section class="carousel-container">
           <article id="carousel">
               <figure><img src="img/desayuno.jpg"></figure>

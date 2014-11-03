@@ -543,88 +543,88 @@ form, .modal .booking_container .booking-form {
 
 .active {
   display: block; }
-  .active #datepicker {
+  .active div[id*="datepicker"] {
     display: block;
     position: absolute;
     top: 1.59em;
     left: 8.52273em; }
-    .active #datepicker .ui-datepicker {
+    .active div[id*="datepicker"] .ui-datepicker {
       width: 250px;
       height: auto;
       border-radius: 0;
       color: #727175;
       line-height: 24px; }
-      .active #datepicker .ui-datepicker a {
+      .active div[id*="datepicker"] .ui-datepicker a {
         text-decoration: none; }
-      .active #datepicker .ui-datepicker table {
+      .active div[id*="datepicker"] .ui-datepicker table {
         width: 100%; }
-        .active #datepicker .ui-datepicker table thead {
+        .active div[id*="datepicker"] .ui-datepicker table thead {
           border: none;
           font-size: 11px; }
-        .active #datepicker .ui-datepicker table tbody tr {
+        .active div[id*="datepicker"] .ui-datepicker table tbody tr {
           border: none; }
-          .active #datepicker .ui-datepicker table tbody tr:last-child {
+          .active div[id*="datepicker"] .ui-datepicker table tbody tr:last-child {
             margin-bottom: 0; }
-        .active #datepicker .ui-datepicker table tbody td {
+        .active div[id*="datepicker"] .ui-datepicker table tbody td {
           border: none; }
-          .active #datepicker .ui-datepicker table tbody td a,
-          .active #datepicker .ui-datepicker table tbody td span {
+          .active div[id*="datepicker"] .ui-datepicker table tbody td a,
+          .active div[id*="datepicker"] .ui-datepicker table tbody td span {
             line-height: 24px;
             text-align: center;
             padding: 0; }
-          .active #datepicker .ui-datepicker table tbody td:last-child {
+          .active div[id*="datepicker"] .ui-datepicker table tbody td:last-child {
             margin-right: 0; }
-      .active #datepicker .ui-datepicker .ui-datepicker-header {
+      .active div[id*="datepicker"] .ui-datepicker .ui-datepicker-header {
         background: transparent;
         color: #000;
         font-size: 14px;
         font-weight: 100;
         border: none; }
-      .active #datepicker .ui-datepicker .ui-datepicker-title {
+      .active div[id*="datepicker"] .ui-datepicker .ui-datepicker-title {
         text-align: center; }
-      .active #datepicker .ui-datepicker .ui-datepicker-prev,
-      .active #datepicker .ui-datepicker .ui-datepicker-next {
+      .active div[id*="datepicker"] .ui-datepicker .ui-datepicker-prev,
+      .active div[id*="datepicker"] .ui-datepicker .ui-datepicker-next {
         display: inline-block;
         width: 30px;
         height: 30px;
         text-align: center;
         cursor: pointer;
         overflow: hidden; }
-        .active #datepicker .ui-datepicker .ui-datepicker-prev:hover,
-        .active #datepicker .ui-datepicker .ui-datepicker-next:hover {
+        .active div[id*="datepicker"] .ui-datepicker .ui-datepicker-prev:hover,
+        .active div[id*="datepicker"] .ui-datepicker .ui-datepicker-next:hover {
           background: transparent;
           border: none; }
-      .active #datepicker .ui-datepicker .ui-datepicker-prev {
+      .active div[id*="datepicker"] .ui-datepicker .ui-datepicker-prev {
         float: left;
         background-position: center -30px; }
-      .active #datepicker .ui-datepicker .ui-datepicker-next {
+      .active div[id*="datepicker"] .ui-datepicker .ui-datepicker-next {
         float: right;
         background-position: center 0px; }
-    .active #datepicker .ui-datepicker-calendar td {
+    .active div[id*="datepicker"] .ui-datepicker-calendar td {
       width: 29px; }
-      .active #datepicker .ui-datepicker-calendar td:first-child .ui-state-active {
+      .active div[id*="datepicker"] .ui-datepicker-calendar td:first-child .ui-state-active {
         margin-left: 0; }
-      .active #datepicker .ui-datepicker-calendar td:first-child .ui-state-active {
+      .active div[id*="datepicker"] .ui-datepicker-calendar td:first-child .ui-state-active {
         width: 29px;
         margin-right: 0; }
-    .active #datepicker .ui-datepicker-calendar tr:last-child .ui-state-active {
+    .active div[id*="datepicker"] .ui-datepicker-calendar tr:last-child .ui-state-active {
       width: 29px;
       margin-bottom: 0; }
-    .active #datepicker .ui-datepicker-calendar .ui-state-default {
+    .active div[id*="datepicker"] .ui-datepicker-calendar .ui-state-default {
       background: transparent; }
-    .active #datepicker .ui-datepicker-calendar .ui-state-hover,
-    .active #datepicker .ui-datepicker-calendar .ui-state-focus {
+    .active div[id*="datepicker"] .ui-datepicker-calendar .ui-state-hover,
+    .active div[id*="datepicker"] .ui-datepicker-calendar .ui-state-focus {
       background: #f7f7f7; }
-      .active #datepicker .ui-datepicker-calendar .ui-state-hover .ui-icon,
-      .active #datepicker .ui-datepicker-calendar .ui-state-focus .ui-icon {
+      .active div[id*="datepicker"] .ui-datepicker-calendar .ui-state-hover .ui-icon,
+      .active div[id*="datepicker"] .ui-datepicker-calendar .ui-state-focus .ui-icon {
         background-image: none; }
-    .active #datepicker .ui-datepicker-calendar .ui-state-active {
+    .active div[id*="datepicker"] .ui-datepicker-calendar .ui-state-active {
       background: rgba(50, 127, 166, 0.9);
       color: #e0e0e0; }
-    .active #datepicker .ui-datepicker-unselectable .ui-state-default {
+    .active div[id*="datepicker"] .ui-datepicker-unselectable .ui-state-default {
       background: #f4f4f4;
       color: #b4b3b3; }
-    .active #datepicker .ui-widget-content .ui-state-highlight {
+    .active div[id*="datepicker"] .ui-widget-content .ui-state-highlight {
       border: none; }
 
 .modal-enabled {
@@ -660,5 +660,3 @@ form, .modal .booking_container .booking-form {
     background-position: 0px 0; }
   .nav_fixed .here {
     color: #e1e8ec; }
-
-/*# sourceMappingURL=main.css.map */
